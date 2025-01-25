@@ -1,7 +1,5 @@
-Sure! Here's the README content formatted in markdown for your `README.md` file:
-
 ```markdown
-# BDD API Test with SpecFlow, xUnit, and RestSharp
+# BDD API Test with SpecFlow, xUnit, and RestSharp. Used https://reqres.in/
 
 This project demonstrates API testing using Behavior-Driven Development (BDD) principles with SpecFlow, xUnit, and RestSharp. The tests are structured in a BDD style, allowing easy collaboration and automated API testing.
 
