@@ -19,7 +19,7 @@ namespace BddApiTest.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class ToTestTheGetRequestFeature : object, Xunit.IClassFixture<ToTestTheGetRequestFeature.FixtureData>, System.IDisposable
+    public partial class ToTestTheUserRequestFeature : object, Xunit.IClassFixture<ToTestTheUserRequestFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace BddApiTest.Features
 #line 1 "User.feature"
 #line hidden
         
-        public ToTestTheGetRequestFeature(ToTestTheGetRequestFeature.FixtureData fixtureData, BddApiTest_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public ToTestTheUserRequestFeature(ToTestTheUserRequestFeature.FixtureData fixtureData, BddApiTest_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace BddApiTest.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "to test the get request", "A short summary of the feature", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "to test the user request", "A short summary of the feature", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,7 +81,7 @@ namespace BddApiTest.Features
         }
         
         [Xunit.SkippableFactAttribute(DisplayName="Get request testing")]
-        [Xunit.TraitAttribute("FeatureTitle", "to test the get request")]
+        [Xunit.TraitAttribute("FeatureTitle", "to test the user request")]
         [Xunit.TraitAttribute("Description", "Get request testing")]
         [Xunit.TraitAttribute("Category", "tag1")]
         public virtual void GetRequestTesting()
@@ -120,6 +120,128 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Post request testing")]
+        [Xunit.TraitAttribute("FeatureTitle", "to test the user request")]
+        [Xunit.TraitAttribute("Description", "Post request testing")]
+        [Xunit.TraitAttribute("Category", "tag2")]
+        public virtual void PostRequestTesting()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "tag2"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post request testing", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 11
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 12
+    testRunner.Given("the user sends a post request with url as \"https://reqres.in/api/users\" and body " +
+                        "\"{ \\\"name\\\": \\\"morpheus\\\", \\\"job\\\": \\\"leader\\\" }\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 13
+    testRunner.Then("the post request should be a success with 201 status code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Update request testing")]
+        [Xunit.TraitAttribute("FeatureTitle", "to test the user request")]
+        [Xunit.TraitAttribute("Description", "Update request testing")]
+        [Xunit.TraitAttribute("Category", "tag3")]
+        public virtual void UpdateRequestTesting()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "tag3"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update request testing", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 16
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 17
+    testRunner.Given("the user sends a put request with url as \"https://reqres.in/api/users/2\" and body" +
+                        " \"{ \\\"name\\\": \\\"morpheus\\\", \\\"job\\\": \\\"zion resident\\\" }\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 18
+    testRunner.Then("the put request should be a success with 200 status code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Delete request testing")]
+        [Xunit.TraitAttribute("FeatureTitle", "to test the user request")]
+        [Xunit.TraitAttribute("Description", "Delete request testing")]
+        [Xunit.TraitAttribute("Category", "tag4")]
+        public virtual void DeleteRequestTesting()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "tag4"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete request testing", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 21
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 22
+ testRunner.Given("the user sends a delete request with url as \"https://reqres.in/api/users/2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 23
+ testRunner.Then("delete request should be a success with 204 status code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
@@ -127,12 +249,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                ToTestTheGetRequestFeature.FeatureSetup();
+                ToTestTheUserRequestFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                ToTestTheGetRequestFeature.FeatureTearDown();
+                ToTestTheUserRequestFeature.FeatureTearDown();
             }
         }
     }
